@@ -1,5 +1,9 @@
 ### Changes
 
+2017-03-16
+
+- Created script for syncing Debian packages code (#6)
+
 2017-03-15
 
 - Added https://github.com/rirror/bugs.debian.org for
