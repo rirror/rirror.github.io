@@ -1,5 +1,9 @@
 ### Changes
 
+2017-05-22
+
+- Setup for automatic sync node on LXD (#7)
+
 2017-03-16
 
 - Created script for syncing Debian packages code (#6)
