@@ -1,0 +1,4 @@
+---
+- name: daily sync
+  cmd: ./sync-packages.debian.org.sh
+  time: 0 0 3
