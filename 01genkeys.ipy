@@ -1,0 +1,16 @@
+#!/usr/bin/env ipython
+# Generate deploy key for each sync project (#8) and
+# corresponding .ssh/config
+
+import os
+
+projects = []
+for name in os.listdir('.'):
+  if name.startswith('sync-') and name.endswith('.sh'):
+    projects.append(name[5:-3])
+
+for project in projects:
+  !echo ...generating deploy key /root/.ssh/$project 
+  !ssh-keygen -f /root/.ssh/$project -q -N ""
+  !echo paste it with write access to https://github.com/rirror/bugs.debian.org/settings/keys
+  !cat /root/.ssh/{project}.pub

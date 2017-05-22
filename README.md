@@ -1,3 +1,21 @@
+### Setup
+
+`rirror` sync node is auto-updating Ubuntu 17.04 running
+in LXD container.
+
+1. Setup LXD client
+2. Create container named `rirror` and bootstrap it
+
+    ./00nodelxd.sh
+
+3. Paste deploy keys shown on the screen to appropriate
+   project repository settings
+
+4. Test that `risync` job works as expected
+
+    lxc exec rirror -- jobber test risync
+
+
 ### Changes
 
 2017-05-22

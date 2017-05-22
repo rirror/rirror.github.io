@@ -7,22 +7,25 @@ lxc exec rirror -- apt-get -y install unattended-upgrades
 lxc exec rirror -- unattended-upgrades -v
 
 echo --- installing git and jobber ---
-lxc exec rirror -- apt-get -y install git
+lxc exec rirror -- apt-get -y install git ipython
 lxc exec rirror -- curl -LO https://github.com/dshearer/jobber/releases/download/v1.2/jobber_1.2-1_amd64.deb
 lxc exec rirror -- dpkg -i jobber_1.2-1_amd64.deb 
 
-echo --- generating key pair ---
-lxc exec rirror -- ssh-keygen -f /root/.ssh/id_rsa -q -N ""
 echo --- adding github.com to known_hosts ---
 lxc exec rirror -- bash -c "ssh-keyscan github.com >> ~/.ssh/known_hosts"
-
-echo --- downloading id_rsa.pub ---
-lxc file pull rirror/root/.ssh/id_rsa.pub .
 
 echo --- uploading sync scripts ---
 lxc file push sync-packages.debian.org.sh rirror/root/
 lxc file push sync-bugs.debian.org.sh rirror/root/
 lxc exec rirror -- bash -c "chmod +rx *.sh"
+
+echo --- generating deploy keys ---
+# keys are named after GitHub repositories
+# e.g. /root/.ssh/bugs.debian.org
+# and should be pasted to project settings manually
+lxc file push 01genkeys.ipy rirror/root/
+lxc exec rirror -- chmod +rx 01genkeys.ipy
+lxc exec rirror -- ./01genkeys.ipy
 
 echo --- setting up daily jobber ---
 lxc file push .jobber rirror/root/

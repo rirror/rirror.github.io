@@ -1,5 +1,5 @@
 ---
-- name: daily sync
+- name: risync
   cmd: |
     ./sync-bugs.debian.org.sh
     ./sync-packages.debian.org.sh
