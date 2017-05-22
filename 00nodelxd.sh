@@ -21,7 +21,8 @@ lxc file pull rirror/root/.ssh/id_rsa.pub .
 
 echo --- uploading sync scripts ---
 lxc file push sync-packages.debian.org.sh rirror/root/
-lxc exec rirror -- chmod +rx sync-packages.debian.org.sh 
+lxc file push sync-bugs.debian.org.sh rirror/root/
+lxc exec rirror -- bash -c "chmod +rx *.sh"
 
 echo --- setting up daily jobber ---
 lxc file push .jobber rirror/root/
