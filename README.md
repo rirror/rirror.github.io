@@ -4,9 +4,10 @@
 in LXD container.
 
 1. Setup LXD client
-2. Create container named `rirror` and bootstrap it
+2. Run `00nodelxd.sh` script that creates LXD container
+   named `rirror` and bootstraps it
 
-    ./00nodelxd.sh
+       ./00nodelxd.sh
 
 3. Paste deploy keys shown on the screen to appropriate
    project repository settings
@@ -17,6 +18,10 @@ in LXD container.
 
 
 ### Changes
+
+2017-11-09
+
+- Added `docs/`
 
 2017-05-22
 
