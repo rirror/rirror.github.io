@@ -1,5 +1,6 @@
-Adding new mirror on GitHub
+#### Adding new mirror on GitHub
 
-1. Create new project
-2. Set description to upstream repository address
-3. Set URL to upstream development entrypoint
+* [ ] Create new project
+* [ ] Set description to upstream repository address
+* [ ] Import initial source code through UI
+* [ ] Set URL to upstream development entrypoint
