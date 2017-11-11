@@ -41,7 +41,8 @@ git -C $PROJECT push --mirror $TARGET
 3. Setup scheduled script execution with `jobber`
 
 * [ ] Add sync script invocation to `.jobber`
-* [ ] Reload config
+* [ ] Reload config and test `risync` job
 ```
 jobber reload
+jobber test risync
 ```
