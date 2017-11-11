@@ -4,6 +4,7 @@
 
 * [ ] Create new project
 * [ ] Set description to upstream repository address
+* [ ] Add `mirror` tag
 * [ ] Import initial source code through UI
 * [ ] Set URL to upstream development entrypoint
 
