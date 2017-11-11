@@ -37,3 +37,11 @@ git -C $PROJECT push --mirror $TARGET
 * [ ] Add [deploy key] with write access to https://github.com/rirror/$PROJECT/settings/keys
 
 [deploy key]: https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys
+
+3. Setup scheduled script execution with `jobber`
+
+* [ ] Add sync script invocation to `.jobber`
+* [ ] Reload config
+```
+jobber reload
+```
