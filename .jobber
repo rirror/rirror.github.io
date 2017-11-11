@@ -3,4 +3,5 @@
   cmd: |
     ./sync-bugs.debian.org.sh
     ./sync-packages.debian.org.sh
+    ./sync-apt.sh
   time: 0 0 3
