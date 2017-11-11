@@ -27,5 +27,6 @@ lxc exec rirror -- chmod +rx 01genkeys.ipy
 lxc exec rirror -- ./01genkeys.ipy
 
 echo --- setting up daily jobber ---
-lxc file push .jobber rirror/root/
+# set uid to 0 (root) to allow jobber load the file
+lxc file push .jobber rirror/root/ --uid=0
 lxc exec rirror -- jobber reload
