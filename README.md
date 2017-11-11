@@ -22,7 +22,8 @@ in LXD container.
 2017-11-11
 
 - Added `docs/` with checklist for new projects (#9)
-- Added https://github.com/rirror/apt
+- Added https://github.com/rirror/apt for
+  https://github.com/yakshaveinc/tasks/issues/11
 
 2017-05-22
 
