@@ -10,9 +10,26 @@
 2. Login to worker node and link it to GitHub project
 
 * [ ] Create `sync-*.sh` script in repository root
+```
+#!/bin/bash
+# Edit these variables for your project
+PROJECT=packages.debian.org
+SOURCE=git://anonscm.debian.org/webwml/packages.git
+TARGET=git@github.com:rirror/packages.debian.org.git
+
+# make sure deploy key is added to target repository
+export GIT_SSH_COMMAND="ssh -i /root/.ssh/$PROJECT"
+
+# skip git clone if directory exists
+[[ -d $PROJECT ]] || git clone --mirror $SOURCE $PROJECT
+
+git -C $PROJECT fetch -p
+git -C $PROJECT push --mirror $TARGET
+```
+
 * [ ] Generate SSH [deploy key] for pushing code to mirror
-
-      ./01genkeys.ipy
-
+```
+./01genkeys.ipy
+```
 
 [deploy key]: https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys
