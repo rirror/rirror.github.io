@@ -1,5 +1,7 @@
 #### Adding new mirror on GitHub
 
+PROJECT=
+
 1. Setup project and complete initial code import
 
 * [ ] Create new project
@@ -32,5 +34,6 @@ git -C $PROJECT push --mirror $TARGET
 ```
 ./01genkeys.ipy
 ```
+* [ ] Add [deploy key] with write access to https://github.com/rirror/$PROJECT/settings/keys
 
 [deploy key]: https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys
