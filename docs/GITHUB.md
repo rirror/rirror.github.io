@@ -9,6 +9,8 @@ PROJECT=
 * [ ] Add `mirror` tag
 * [ ] Import initial source code through UI
 * [ ] Set URL to upstream development entrypoint
+* [ ] Turn off wiki
+* [ ] Turn off issues
 
 2. Login to worker node and link it to GitHub project
 
