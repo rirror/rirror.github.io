@@ -19,9 +19,10 @@ in LXD container.
 
 ### Changes
 
-2017-11-09
+2017-11-11
 
-- Added `docs/`
+- Added `docs/` with checklist for new projects (#9)
+- Added https://github.com/rirror/apt
 
 2017-05-22
 
