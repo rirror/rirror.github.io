@@ -15,8 +15,7 @@ echo --- adding github.com to known_hosts ---
 lxc exec rirror -- bash -c "ssh-keyscan github.com >> ~/.ssh/known_hosts"
 
 echo --- uploading sync scripts ---
-lxc file push sync-packages.debian.org.sh rirror/root/
-lxc file push sync-bugs.debian.org.sh rirror/root/
+lxc file push sync-*.sh rirror/root/
 lxc exec rirror -- bash -c "chmod +rx *.sh"
 
 echo --- generating deploy keys ---
