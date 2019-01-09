@@ -1,20 +1,28 @@
-#!/usr/bin/ipython3
+#!/usr/bin/ipython3 --
 # Generate deploy key for each sync project (#8)
 # in /root/.ssh/{project}
 
 import os
+import sys
 
 projects = []
 for name in os.listdir('.'):
   if name.startswith('sync-') and name.endswith('.sh'):
     projects.append(name[5:-3])
 
+force = '-f' in sys.argv or '--force' in sys.argv
+
 for project in projects:
   keypath = "/root/.ssh/" + project
   if os.path.exists(keypath):
-    !echo ...deploy key already exists - $keypath 
-  else:  
-    !echo ...generating deploy key $keypath
-    !ssh-keygen -t ed25519 -f $keypath -q -N ""
-    !echo paste it with write access to https://github.com/rirror/$project/settings/keys
-    !cat {keypath}.pub
+    !echo ...deploy key already exists - $keypath
+    if force:
+      os.remove(keypath)
+    else:
+      continue
+
+  !echo ...generating deploy key $keypath
+  !ssh-keygen -t ed25519 -f $keypath -q -N ""
+  !echo paste it with write access to https://github.com/rirror/$project/settings/keys
+  !cat {keypath}.pub
+
