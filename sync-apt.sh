@@ -1,7 +1,7 @@
 #!/bin/bash
 # Edit these variables for your project
 PROJECT=apt
-SOURCE=git://anonscm.debian.org/git/apt/apt.git
+SOURCE=https://salsa.debian.org/apt-team/apt
 TARGET=git@github.com:rirror/apt.git
 
 # make sure deploy key is added to target repository

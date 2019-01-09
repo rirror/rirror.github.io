@@ -1,6 +1,6 @@
 #!/bin/bash
 PROJECT=packages.debian.org
-SOURCE=git://anonscm.debian.org/webwml/packages.git
+SOURCE=https://salsa.debian.org/webmaster-team/packages
 TARGET=git@github.com:rirror/packages.debian.org.git
 
 # make sure deploy key is added to target repository
