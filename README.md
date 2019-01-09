@@ -14,7 +14,7 @@ auto updates, but manual reboots.
 
 4. Test that `risync` job works as expected
 
-    lxc exec rirror -- jobber test risync
+       lxc exec rirror -- jobber test risync
 
 
 ### Changes
