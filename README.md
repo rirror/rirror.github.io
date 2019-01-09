@@ -1,7 +1,7 @@
 ### Setup
 
-`rirror` sync node is auto-updating Ubuntu 17.04 running
-in LXD container.
+`rirror` sync node is Ubuntu 18.10 LXD container, with
+auto updates, but manual reboots.
 
 1. Setup LXD client
 2. Run `00nodelxd.sh` script that creates LXD container
@@ -18,6 +18,12 @@ in LXD container.
 
 
 ### Changes
+
+2019-01-09
+
+- Updated to Ubuntu 18.10, jobber 1.2.1 and IPython3
+- Use Ed25519 for deploy keys
+- Limit rirror container to 1 CPU and 512MB RAM
 
 2017-11-11
 

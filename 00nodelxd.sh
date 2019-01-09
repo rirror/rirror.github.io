@@ -2,6 +2,9 @@
 
 echo "--- creating rirror node ---"
 lxc launch ubuntu:18.10 rirror
+# limit container to 1 CPU and 512Mb of memory
+lxc config set rirror limits.cpu 1
+lxc config set rirror limits.memory 512MB
 
 echo "--- installing updates ---"
 lxc exec rirror -- apt-get -y update
