@@ -21,9 +21,10 @@ auto updates, but manual reboots.
 
 2019-01-09
 
-- Updated to Ubuntu 18.10, jobber 1.2.1 and IPython3
+- Updated to Ubuntu 18.10, jobber 1.3.4 and IPython3
 - Use Ed25519 for deploy keys
 - Limit rirror container to 1 CPU and 512MB RAM
+- Debian source repos moved to Salsa (GitLab)
 
 2017-11-11
 
