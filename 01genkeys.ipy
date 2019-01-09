@@ -15,6 +15,6 @@ for project in projects:
     !echo ...deploy key already exists - $keypath 
   else:  
     !echo ...generating deploy key $keypath
-    !ssh-keygen -f $keypath -q -N ""
+    !ssh-keygen -t ed25519 -f $keypath -q -N ""
     !echo paste it with write access to https://github.com/rirror/$project/settings/keys
     !cat {keypath}.pub
