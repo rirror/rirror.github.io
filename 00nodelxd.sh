@@ -10,7 +10,7 @@ lxc exec rirror -- apt-get -y update
 lxc exec rirror -- unattended-upgrades -v
 
 echo "--- installing git, ipython (bash replacement) and jobber ---"
-lxc exec rirror -- apt-get -y install git ipython
+lxc exec rirror -- apt-get -y install git ipython3
 lxc exec rirror -- curl -LO https://github.com/dshearer/jobber/releases/download/v1.2.1/jobber_1.2.1-1_amd64.deb
 lxc exec rirror -- dpkg -i jobber_1.2.1-1_amd64.deb 
 

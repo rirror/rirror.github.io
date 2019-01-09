@@ -1,4 +1,4 @@
-#!/usr/bin/env ipython
+#!/usr/bin/ipython3
 # Generate deploy key for each sync project (#8)
 # in /root/.ssh/{project}
 
