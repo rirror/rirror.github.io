@@ -19,6 +19,11 @@ auto updates, but manual reboots.
 
 ### Changes
 
+2019-01-22
+
+- Removed Apt, which apt got an official mirror https://github.com/Debian/apthas an official GiHub mirror now
+  https://github.com/Debian/apt
+
 2019-01-09
 
 - Updated to Ubuntu 18.10, jobber 1.3.4 and IPython3
