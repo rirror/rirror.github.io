@@ -1,5 +1,7 @@
 #!/bin/sh
 
+JOBBER="1.4.0"
+
 echo "--- creating rirror node ---"
 lxc launch ubuntu:18.10 rirror
 # limit container to 1 CPU and 512Mb of memory
@@ -14,8 +16,8 @@ lxc exec rirror -- unattended-upgrades -v
 
 echo "--- installing git, ipython (bash replacement) and jobber ---"
 lxc exec rirror -- apt-get -y install git ipython3
-lxc exec rirror -- curl -LO https://github.com/dshearer/jobber/releases/download/v1.3.4/jobber_1.3.4-1_amd64.deb
-lxc exec rirror -- dpkg -i jobber_1.3.4-1_amd64.deb 
+lxc exec rirror -- curl -LO https://github.com/dshearer/jobber/releases/download/v${JOBBER}/jobber_${JOBBER}-1_amd64.deb
+lxc exec rirror -- dpkg -i jobber_${JOBBER}-1_amd64.deb
 
 echo "--- adding github.com to known_hosts ---"
 lxc exec rirror -- bash -c "ssh-keyscan github.com >> ~/.ssh/known_hosts"

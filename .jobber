@@ -1,6 +1,8 @@
----
-- name: risync
-  cmd: |
-    bash sync-bugs.debian.org.sh
-    bash sync-packages.debian.org.sh
-  time: 0 0 3
+version: 1.4
+
+jobs:
+  risync:
+    cmd: |
+      bash sync-bugs.debian.org.sh
+      bash sync-packages.debian.org.sh
+    time: 0 0 3
