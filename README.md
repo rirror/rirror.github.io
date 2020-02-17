@@ -19,6 +19,10 @@ auto updates, but manual reboots.
 
 ### Changes
 
+2020-02-18
+
+- Switched to jobber 1.4.0
+
 2019-01-22
 
 - Removed Apt, which apt got an official mirror https://github.com/Debian/apthas an official GiHub mirror now
